@@ -1,0 +1,19 @@
+function titleCase(str) {
+  
+  //make every character in the sentence lower case, and split the sentence into an array or words.
+  str = str.toLowerCase().split(' ');
+  
+  //use the replace method to capitalize the first letter of each word.
+  for(var i=0;i<str.length;i++){
+  var f=str[i].charAt(0);
+   str[i]=str[i].replace(str[i].charAt(0),function replace(f){
+   return f.toUpperCase();
+ });
+
+  }
+  
+  //join the sentence, and return the string.
+  return str.join(" ");
+
+}
+titleCase("I'm a little tea pot");
